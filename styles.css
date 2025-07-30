@@ -190,3 +190,48 @@ section.glass:hover,
 section.glass,
 .track-card {
   transition: transform 0.3s ease, box-shadow 0.3s 
+
+
+/* 📱 Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  header, section.glass, footer {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .track-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    overflow-x: hidden;
+  }
+
+  .track-card {
+    width: 90%;
+  }
+
+  .manifesto {
+    font-size: 1em;
+    padding-left: 15px;
+    border-left: 3px solid #00ffaa;
+  }
