@@ -41,6 +41,7 @@ body {
   margin: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 20px rgba(0, 255, 170, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Космический фон */
@@ -123,7 +124,7 @@ body {
   animation: pulse 1.2s infinite;
 }
 
-/* Манифест блок */
+/* Манифест */
 .manifesto {
   text-align: left;
   line-height: 1.6;
@@ -140,6 +141,7 @@ body {
 }
 .manifesto p {
   color: #ddd;
+}
 
 /* Музыкальный блок */
 .music-player {
@@ -178,63 +180,14 @@ body {
   margin-top: 10px;
   color: #ccc;
   font-size: 0.95em;
+}
 
-/* Анимации при наведении на блоки */
+/* Анимации при наведении */
 section.glass:hover,
 .track-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: 0 0 25px rgba(0, 255, 170, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-section.glass,
-.track-card {
-  transition: transform 0.3s ease, box-shadow 0.3s 
-
-
-/* 📱 Адаптация под мобильные устройства */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-
-  header, section.glass, footer {
-    margin: 10px;
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 1.8em;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 1.4em;
-  }
-
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .track-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    overflow-x: hidden;
-  }
-
-  .track-card {
-    width: 90%;
-  }
-
-  .manifesto {
-    font-size: 1em;
-    padding-left: 15px;
-    border-left: 3px solid #00ffaa;
-  }
 
 /* 📬 Связаться со мной */
 .contact-me {
@@ -242,7 +195,6 @@ section.glass,
   margin: 50px auto;
   max-width: 700px;
 }
-
 .contact-button {
   display: inline-block;
   padding: 12px 30px;
@@ -260,6 +212,8 @@ section.glass,
 .contact-button:hover {
   background: #00ffaa99;
   box-shadow: 0 0 25px rgba(0, 255, 170, 0.5);
+  transform: scale(1.05);
+}
 
 /* Интро-экран */
 #intro-screen {
@@ -275,7 +229,6 @@ section.glass,
   z-index: 99999;
   transition: opacity 1s ease, visibility 1s ease;
 }
-
 .intro-logo {
   font-size: 3em;
   color: #00ffaa;
@@ -283,8 +236,6 @@ section.glass,
   letter-spacing: 2px;
   animation: glow 2s ease-in-out infinite alternate;
 }
-
-/* Свечение текста */
 @keyframes glow {
   from {
     text-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa66;
@@ -293,7 +244,43 @@ section.glass,
     text-shadow: 0 0 20px #00ffaa, 0 0 30px #00ffaaaa;
   }
 }
-
-/* Скрытие экрана */
 #intro-screen.hidden {
   opacity: 0;
+  visibility: hidden;
+}
+
+/* 📱 Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  header, section.glass, footer {
+    margin: 10px;
+    padding: 15px;
+  }
+  h1 {
+    font-size: 1.8em;
+    text-align: center;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .track-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    overflow-x: hidden;
+  }
+  .track-card {
+    width: 90%;
+  }
+  .manifesto {
+    font-size: 1em;
+    padding-left: 15px;
+    border-left: 3px solid #00ffaa;
