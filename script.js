@@ -17,3 +17,10 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.left = `${e.clientX}px`;
   cursor.style.top = `${e.clientY}px`;
 });
+
+// Загрузочный экран
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("intro-screen").classList.add("hidden");
+  }, 2500);
+});
