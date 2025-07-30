@@ -260,3 +260,40 @@ section.glass,
 .contact-button:hover {
   background: #00ffaa99;
   box-shadow: 0 0 25px rgba(0, 255, 170, 0.5);
+
+/* Интро-экран */
+#intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.intro-logo {
+  font-size: 3em;
+  color: #00ffaa;
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Свечение текста */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa66;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffaa, 0 0 30px #00ffaaaa;
+  }
+}
+
+/* Скрытие экрана */
+#intro-screen.hidden {
+  opacity: 0;
