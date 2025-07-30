@@ -7,10 +7,43 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(to bottom, #000000, #111111);
+  background: #000;
   color: #f0f0f0;
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Анимация фона — звезды */
+.stars, .comets {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.stars {
+  background: url('https://raw.githubusercontent.com/dente22/WithYou_bot_public/main/assets/stars.png') repeat;
+  animation: moveStars 200s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes moveStars {
+  0% { background-position: 0 0; }
+  100% { background-position: -10000px 5000px; }
+}
+
+.comets {
+  background: url('https://raw.githubusercontent.com/dente22/WithYou_bot_public/main/assets/comets.gif') repeat;
+  background-size: cover;
+  opacity: 0.1;
+  animation: flicker 15s ease-in-out infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.05; }
+  50% { opacity: 0.2; }
 }
 
 header {
@@ -92,4 +125,4 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
-} 
+}
