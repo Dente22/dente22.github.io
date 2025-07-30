@@ -140,3 +140,41 @@ body {
 }
 .manifesto p {
   color: #ddd;
+
+/* Музыкальный блок */
+.music-player {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+.music-player h2 {
+  color: #00ffaa;
+  margin-bottom: 20px;
+}
+.track-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+}
+.track-list::-webkit-scrollbar {
+  display: none;
+}
+.track-card {
+  flex: 0 0 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 15px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px rgba(0, 255, 170, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.track-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
+}
+.track-card p {
+  text-align: center;
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 0.95em;
