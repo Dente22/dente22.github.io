@@ -178,3 +178,15 @@ body {
   margin-top: 10px;
   color: #ccc;
   font-size: 0.95em;
+
+/* Анимации при наведении на блоки */
+section.glass:hover,
+.track-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 0 25px rgba(0, 255, 170, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.glass,
+.track-card {
+  transition: transform 0.3s ease, box-shadow 0.3s 
