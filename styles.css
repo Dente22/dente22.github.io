@@ -122,3 +122,21 @@ body {
   border-radius: 50%;
   animation: pulse 1.2s infinite;
 }
+
+/* Манифест блок */
+.manifesto {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1.1em;
+  max-width: 800px;
+  margin: 40px auto;
+  border-left: 4px solid #00ffaa;
+  padding-left: 20px;
+  background: rgba(255, 255, 255, 0.03);
+}
+.manifesto h2 {
+  color: #00ffaa;
+  margin-bottom: 15px;
+}
+.manifesto p {
+  color: #ddd;
