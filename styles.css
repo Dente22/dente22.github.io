@@ -235,3 +235,28 @@ section.glass,
     padding-left: 15px;
     border-left: 3px solid #00ffaa;
   }
+
+/* 📬 Связаться со мной */
+.contact-me {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 700px;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #00ffaa44;
+  border: 2px solid #00ffaa;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 170, 0.3);
+}
+.contact-button:hover {
+  background: #00ffaa99;
+  box-shadow: 0 0 25px rgba(0, 255, 170, 0.5);
